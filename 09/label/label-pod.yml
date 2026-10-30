@@ -1,0 +1,16 @@
+---
+# kubaectl run label-pod --image=nginx:1.26 --port=80 --labels="name=mainui,rel=stable"
+apiVersion: v1
+kind: Pod
+metadata:
+  name: label-pod
+  labels:
+    name: mainui
+    rel: stable
+spec:
+  containers:
+  - name: nginx
+    image: nginx:1.26
+    ports:
+    - containerPort: 80
+
